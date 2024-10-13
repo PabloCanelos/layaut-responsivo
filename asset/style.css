@@ -17,6 +17,7 @@ body {
     "header"
     "nav"
     "main"
+    "menu"
     "footer";     
 }
 header{
@@ -27,7 +28,7 @@ header{
     padding-top: 1rem;
     width: 100%;
     justify-content: space-between;   
-
+    flex-direction: column;  
 }
 .header-item{
     width: 100%;
@@ -55,6 +56,7 @@ nav{
     color: black;
     height: 4rem;
     background-color: #e2e2e2;
+    
 }
 input{
     width: 16rem;
@@ -102,22 +104,27 @@ input::placeholder {
     margin: -2px;
     border: solid 1px #e2e2e2;
     width: 2rem;
-    color: #00579c;
+    color: #020507;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
+menu{
+    grid-area: menu;
+}
 .button-container{
+
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #ffff;
-}
+
+}/*
 .card-description{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+}*/
 footer{
     grid-area: footer;
     background-color: #033761;
@@ -136,32 +143,34 @@ footer{
         grid-template-areas: 
         "header nav"
         "header main"
-        "footer section"
+        "footer menu"
         ;
         grid-template-columns: 15em auto;
     }
     header{
         grid-area: header;
-        height: 100%;
+        height: auto;
         display: flex;
+        
     }
     section{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        
-    }
-    .card-desktop{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 10px;
-    }
-    .card-mobile{
-        display: none;
+        grid-template-columns: 1fr 1fr 1fr 1fr;  
     }
     input {
         width: 90%;
     }
 }
+@media(max-width: 575px) {
+    ul{
+        display: none;
+    }
+}
+.card-1{
+    border: solid 1px black;
+}
+
+
 
 /*
 
